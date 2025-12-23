@@ -1,4 +1,3 @@
-/* CSS Reset & Base */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -244,3 +243,64 @@ body {
     .hero p { font-size: 1.1rem; }
     .section-title { font-size: 2.3rem; }
 }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+main { animation: fadeIn 0.8s ease-out; }
+
+/* Underline Hover Effect for Nav */
+.nav-underline {
+    position: relative;
+    text-decoration: none;
+}
+.nav-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #b76e22; /* Your accent color */
+    transition: width 0.3s ease-in-out;
+}
+.nav-underline:hover::after { width: 100%; }
+
+/* Image Hover Grow Effect */
+.hover-grow {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+}
+.hover-grow:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Preview Card Styling */
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin: 4rem 0;
+}
+.preview-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.preview-card img { width: 100%; height: 200px; object-fit: cover; }
+.preview-content { padding: 1.5rem; }
+.preview-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 0.5rem; }
+.btn-card {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background-color: #4a6c5d; /* A complementary green */
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+.btn-card:hover { background-color: #3a5749; }
