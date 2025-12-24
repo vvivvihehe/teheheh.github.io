@@ -365,4 +365,51 @@ main { animation: fadeIn 0.8s ease-out; }
     opacity: 1;
     transform: translateY(0);
 }
+/* ===== ABOUT PAGE STYLES ===== */
+.page-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), #4a6c5d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+}
+.page-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.hero-text-container {
+    max-width: 800px;
+}
+.story-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin: 4rem auto;
+}
+.story-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    color: #2a2c2e;
+    margin-bottom: 1.5rem;
+}
+.image-placeholder {
+    height: 300px;
+    background-color: #e3d5c8;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #7a6856;
+    font-weight: 500;
+}
+.image-placeholder i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
 
