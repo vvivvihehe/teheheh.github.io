@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Story | Apple Orchard Retreat</title>
-    <!-- THE CRITICAL LINE: This links your CSS. It must be exactly like this. -->
     <link rel="stylesheet" href="style.css">
-    <!-- These links import the fonts and icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -31,7 +29,7 @@
     <main>
         <!-- HERO -->
         <section class="page-hero">
-            <div class="container hero-text-container">
+            <div class="container">
                 <h1 class="fade-in">Our Story, Rooted in Manang</h1>
                 <p class="fade-in">A legacy of land, family, and sustainable hospitality.</p>
             </div>
@@ -44,12 +42,38 @@
                     <h2>The Farmhouse & The Orchard</h2>
                     <p>Our story began generations ago with the first apple saplings planted in the rich soil of Bhratang, Manang. What started as a family homestead has gently evolved into a serene agro-tourism retreat.</p>
                     <p>We believe in the slow rhythm of mountain life—the bloom of the orchard in spring, the harvest in autumn, and the quiet introspection of winter.</p>
+                    <blockquote class="story-quote">
+                        "We don't just host guests; we welcome them into the ongoing story of this land."
+                    </blockquote>
                 </div>
                 <div class="story-image hover-grow fade-in">
-                    <!-- PLACEHOLDER FOR IMAGE -->
                     <div class="image-placeholder">
                         <i class="fas fa-mountain"></i>
                         <p>Image: Historic Farmhouse</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSION SECTION -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Our Agro-Tourism Focus</h2>
+                <div class="values-grid">
+                    <div class="value-card fade-in">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Harmony with Nature</h3>
+                        <p>We practice sustainable farming and nurture our heritage apple varieties to protect the Annapurna ecosystem.</p>
+                    </div>
+                    <div class="value-card fade-in">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3>Authentic Connection</h3>
+                        <p>Your stay is an invitation to participate through farm tours and sharing stories by the fireplace.</p>
+                    </div>
+                    <div class="value-card fade-in">
+                        <i class="fas fa-heart"></i>
+                        <h3>Rustic Luxury</h3>
+                        <p>We define luxury by authenticity, comfort, and the profound peace of this special place.</p>
                     </div>
                 </div>
             </div>
@@ -66,11 +90,20 @@
         </div>
     </footer>
 
-    <!-- LINK TO YOUR JAVASCRIPT FILE -->
     <script src="script.js"></script>
     <script>
-        // Simple script to update copyright year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Fade-in on scroll animation
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        fadeElements.forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
