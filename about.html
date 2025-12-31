@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | Apple Orchard Retreat, Manang</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- PASTE THE ENTIRE HEADER CODE FROM header-footer.html HERE -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">Orchard Retreat</a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-underline">Home</a>
+                <a href="about.html" class="nav-underline">About</a>
+                <a href="rooms.html" class="nav-underline">Rooms</a>
+                <a href="facilities.html" class="nav-underline">Facilities</a>
+                <a href="contact.html" class="nav-underline">Contact</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
 
+    <main>
+        <!-- HERO for About Page -->
+        <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;">
+            <div class="container">
+                <h1 class="fade-in">Our Story, Rooted in Manang</h1>
+                <p class="fade-in">A legacy of land, family, and sustainable hospitality.</p>
+            </div>
+        </section>
+
+        <!-- STORY CONTENT -->
+        <section class="section">
+            <div class="container story-container">
+                <div class="story-text fade-in">
+                    <h2>The Farmhouse & The Orchard</h2>
+                    <p>Our story began generations ago with the first apple saplings planted in the rich soil of Bhratang, Manang. What started as a family homestead has gently evolved into a serene agro-tourism retreat, always holding true to its roots.</p>
+                    <p>We believe in the slow rhythm of mountain life—the bloom of the orchard in spring, the harvest in autumn, and the quiet introspection of winter. Every stone of the farmhouse and every branch in the orchard tells a part of our history.</p>
+                    <blockquote class="story-quote">
+                        "We don't just host guests; we welcome them into the ongoing story of this land."
+                    </blockquote>
+                </div>
+                <div class="story-image hover-grow fade-in">
+                    <div class="img-placeholder-large" style="background-color: #e3d5c8; color: #7a6856; display: flex; align-items: center; justify-content: center; height: 400px; border-radius: 8px;">
+                        <span>Historic Photo of the Farmhouse</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSION SECTION -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Our Agro-Tourism Focus</h2>
+                <div class="values-grid">
+                    <div class="value-card fade-in">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Harmony with Nature</h3>
+                        <p>We practice sustainable farming, nurture our heritage apple varieties, and minimize our footprint to protect the pristine Annapurna ecosystem.</p>
+                    </div>
+                    <div class="value-card fade-in">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3>Authentic Connection</h3>
+                        <p>Your stay is an invitation to participate—be it through a farm tour, understanding local culture, or simply sharing stories by the fireplace.</p>
+                    </div>
+                    <div class="value-card fade-in">
+                        <i class="fas fa-heart"></i>
+                        <h3>Rustic Luxury</h3>
+                        <p>We define luxury not by extravagance, but by authenticity, comfort, and the profound peace that comes from being in a truly special place.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PASTE THE ENTIRE FOOTER CODE FROM header-footer.html HERE -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Apple Orchard Retreat, Manang. All rights reserved.</p>
+            <p>Experience agro-tourism in the heart of the Annapurna foothills.</p>
+            <p class="footer-contact">
+                <a href="tel:+977-9801234567"><i class="fas fa-phone"></i> +977 980-1234567</a> |
+                <a href="mailto:hello@example.com"><i class="fas fa-envelope"></i> Inquire</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple script to update copyright year and handle fade-in on scroll
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Basic fade-in on scroll effect
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
