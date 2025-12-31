@@ -307,6 +307,7 @@ main { animation: fadeIn 0.8s ease-out; }
 /* ===== ABOUT PAGE STYLES ===== */
 .page-hero {
     height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -328,6 +329,12 @@ main { animation: fadeIn 0.8s ease-out; }
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+}
+.story-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    color: #2a2c2e;
+    margin-bottom: 1.5rem;
 }
 .story-quote {
     font-family: 'Cormorant Garamond', serif;
@@ -356,50 +363,10 @@ main { animation: fadeIn 0.8s ease-out; }
     color: #4a6c5d;
     margin-bottom: 1rem;
 }
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-/* ===== ABOUT PAGE STYLES ===== */
-.page-hero {
-    height: 60vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), #4a6c5d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    margin-top: 70px;
-}
-.page-hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-.hero-text-container {
-    max-width: 800px;
-}
-.story-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    margin: 4rem auto;
-}
-.story-text h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.2rem;
-    color: #2a2c2e;
-    margin-bottom: 1.5rem;
-}
 .image-placeholder {
     height: 300px;
-    background-color: #e3d5c8;
+    background-color: #f8f5f2;
+    border: 2px dashed #e3d5c8;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -411,5 +378,14 @@ main { animation: fadeIn 0.8s ease-out; }
 .image-placeholder i {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: #c9b8a5;
 }
-
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
